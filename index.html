@@ -2,11 +2,16 @@
 <html>
     <head>
         <style>
-        .body {
-            font-family: arial, sans-serif;
+        body {
+            font-family: arial;
+            font-size: 13px;
+        }
+        a {
+            color: rgba(0,0,0,0.87);
+            text-decoration: none;   
         }
         #top-left {
-                color: #eee;
+                color: #eee; 
         }
         #sign-in-button {
             background-color: #4285f4;
@@ -14,31 +19,42 @@
             font-weight: bold;
             border-radius: 2px;
             font-size: 13px;
-            padding: 0px 12px;
             border: 1px solid;
+            padding: 0px 12px;
+            line-height: 28px;
+            margin: 0 0 0 15px;
         }
         #menu {
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             background-color: #eed;
         }
         #top-right {
-            float: right;
             display: flex;
+            align-items: center;
+            min-width: 220px;
+            padding: 0 30px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         </style>
         <title>Google.co.uk</title>
     </head>
     <body>
-        <div id="top-left">
-            <a style="padding: 5px;" href="#">About</a>
-            <a style="padding: 5px;" href="#">Store</a>
-        </div>
-        <div id="top-right">
-            <a style="padding: 5px;" href="#">Gmail</a>
-            <a style="padding: 5px;" href="#">Images</a>
-            <div style="margin-left: 5px; margin-right: 5px;" id="menu"></div>
-            <button style="margin-left: 5px; margin-right: 5px;" id="sign-in-button">Sign in</button>       
-        </div>
+        <header>
+            <div id="top-left">
+                <a style="padding: 5px;" href="#">About</a>
+                <a style="padding: 5px;" href="#">Store</a>
+            </div>
+            <div id="top-right">
+                <a style="position: block;" href="#">Gmail</a>
+                <a style="padding: 15px; position: block" href="#">Images</a>
+                <div style="" id="menu"></div>
+                <button id="sign-in-button">Sign in</button>       
+            </div>
+        </header>
     </body>
 </html>
