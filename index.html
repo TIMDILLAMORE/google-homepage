@@ -9,10 +9,7 @@
         a {
             color: rgba(0,0,0,0.87);
             text-decoration: none;   
-        }
-        #top-left {
-                color: #eee; 
-        }
+        } 
         #sign-in-button {
             background-color: #4285f4;
             color: #fff;
@@ -25,9 +22,16 @@
             margin: 0 0 0 15px;
         }
         #menu {
-            width: 30px;
-            height: 30px;
-            background-color: #eed;
+            width: 15px;
+            height: 15px;
+            display: grid;
+            margin: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 2px;
+        }
+        .box{
+            background-color: #666
         }
         #top-right {
             display: flex;
@@ -39,6 +43,35 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        #logo {
+            display: flex;
+            padding-top: 109px;
+            justify-content: center;
+        }
+        #g {
+            color: #4285F4;
+        }
+        #o1 {
+            color: #DB4437;
+        }
+        #o2 {
+            color: #F4B400;
+        }
+        #l {
+            color: #0F9D58;
+        }
+        #e {
+            color: #DB4437;
+        }
+        .letter {
+            font-size: 100px;
+        }
+        #search-bar {
+        display: block;    
+        margin: auto;
+        width: 487px;
+        height: 34px;
         }
         </style>
         <title>Google.co.uk</title>
@@ -52,9 +85,30 @@
             <div id="top-right">
                 <a style="position: block;" href="#">Gmail</a>
                 <a style="padding: 15px; position: block" href="#">Images</a>
-                <div style="" id="menu"></div>
+                <div id="menu" href="#">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
                 <button id="sign-in-button">Sign in</button>       
             </div>
         </header>
+            <div id="logo">
+                <div class="letter" id="g">G</div>
+                <div class="letter" id="o1">o</div>
+                <div class="letter" id="o2">o</div>
+                <div class="letter" id="g">g</div>
+                <div class="letter" id="l">l</div>
+                <div class="letter" id="e">e</div>
+            </div>
+            <div>
+            <input type="text" id="search-bar">
+            </div>           
     </body>
 </html>
