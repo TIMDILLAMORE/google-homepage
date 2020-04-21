@@ -5,6 +5,7 @@
         body {
             font-family: arial;
             font-size: 13px;
+            background-color: #fff;
         }
         a {
             color: rgba(0,0,0,0.87);
@@ -46,8 +47,9 @@
         }
         #logo {
             display: flex;
-            padding-top: 109px;
             justify-content: center;
+            padding-top: 109px;
+            font-family: Futura;
         }
         #g {
             color: #4285F4;
@@ -63,16 +65,46 @@
         }
         #e {
             color: #DB4437;
+            transform: rotate(-15deg);
         }
         .letter {
-            font-size: 100px;
+            font-size: 85px;
+        }
+        #form {
+            padding-top: 6px;
+            display: flex;
+            justify-content: center;
         }
         #search-bar {
-        display: block;    
-        margin: auto;
-        width: 487px;
-        height: 34px;
+            border-top:    0.75px solid #ccc; 
+            border-bottom: 0.75px solid #ccc;
+            width: 487px;
+            height: 34px;
+            z-index: 10;
+            background-color: #fff;
         }
+        #search-bar-left {
+            content: "";
+            border: 0.75px solid #ccc;
+            border-radius: 50%;
+            height: 34px;
+            width: 34px;
+            position: relative;
+            left: 17px;
+            z-index: 1;
+        }
+        #search-bar-right {
+            content: "";
+            border-width: 0.75px;
+            border-color: #ccc;
+            border-style: solid;
+            border-radius: 50%;
+            height: 34px;
+            width: 34px;
+            position: relative;
+            left: -17px;
+            z-index: 1;
+        } 
         </style>
         <title>Google.co.uk</title>
     </head>
@@ -99,6 +131,7 @@
                 <button id="sign-in-button">Sign in</button>       
             </div>
         </header>
+        <div style="height: 233px">
             <div id="logo">
                 <div class="letter" id="g">G</div>
                 <div class="letter" id="o1">o</div>
@@ -107,8 +140,11 @@
                 <div class="letter" id="l">l</div>
                 <div class="letter" id="e">e</div>
             </div>
-            <div>
-            <input type="text" id="search-bar">
-            </div>           
+        </div>
+        <div id="form">
+            <div id="search-bar-left"></div>    
+            <div id="search-bar"></div>
+            <div id="search-bar-right"></div>
+        </div>           
     </body>
 </html>
