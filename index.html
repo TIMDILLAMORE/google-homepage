@@ -5,11 +5,12 @@
         body {
             font-family: arial;
             font-size: 13px;
-            background-color: #fff;
+            background-color: #fff;   
         }
         a {
-            color: rgba(0,0,0,0.87);
-            text-decoration: none;   
+            text-decoration: none;  
+            padding-right: 15px;
+            color: rgba(0,0,0,.54);
         } 
         #sign-in-button {
             background-color: #4285f4;
@@ -17,7 +18,7 @@
             font-weight: bold;
             border-radius: 2px;
             font-size: 13px;
-            border: 1px solid;
+            border: none;
             padding: 0px 12px;
             line-height: 28px;
             margin: 0 0 0 15px;
@@ -44,6 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 0px;
         }
         #logo {
             display: flex;
@@ -71,52 +73,100 @@
             font-size: 85px;
         }
         #form {
-            padding-top: 6px;
+            padding-top: 4px;
             display: flex;
             justify-content: center;
         }
         #search-bar {
-            border-top:    0.75px solid #ccc; 
-            border-bottom: 0.75px solid #ccc;
+            border: 1px solid #ccc; 
             width: 487px;
-            height: 34px;
-            z-index: 10;
+            height: 44px;
             background-color: #fff;
+            border-radius: 24px;
+            width: 582px;
+            box-shadow: none;
         }
-        #search-bar-left {
-            content: "";
-            border: 0.75px solid #ccc;
-            border-radius: 50%;
-            height: 34px;
-            width: 34px;
-            position: relative;
-            left: 17px;
-            z-index: 1;
+        #search-bar:hover {
+            box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+            border-color: rgba(223,225,229,0);
         }
-        #search-bar-right {
-            content: "";
-            border-width: 0.75px;
-            border-color: #ccc;
-            border-style: solid;
-            border-radius: 50%;
+        #text-input {
+            display: block;
+            width: 530px;
             height: 34px;
-            width: 34px;
-            position: relative;
-            left: -17px;
-            z-index: 1;
-        } 
+            margin: auto; 
+            border: none;
+            margin: auto;
+            margin-top: 4px;       
+        }  
+        input:focus {
+            outline: none;
+            font-size: 16px;  
+        }
+        #search-bar:focus-within {
+            box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+            border-color: rgba(223,225,229,0);
+        }
+        .form-buttons {
+            margin: 11px 4px;
+            font-size: 14px;
+            color: #5F6368;
+            background-color: #f2f2f2;
+            line-height: 27px;
+            border-radius: 4px;
+            height: 36px;
+            padding: 0 16px;
+            border: 1px solid #f2f2f2;
+        }
+        .form-buttons:hover {
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 1px 0 rgba(32,33,36,0.28);
+        }
+        #buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 18px;
+        }
+        #footer {
+            background-color: #f2f2f2; 
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            left: 0px;
+            border-top: 1px solid #ccc;
+        }
+        #uk {
+            padding-left: 30px;
+            line-height: 40px;
+            font-size: 15px;
+            border-bottom: 1px solid #ccc;
+            color: rgba(0,0,0,.54);
+            text-align: left;   
+        }
+        #footer-links {
+            display: flex;
+            justify-content: space-between;
+            line-height: 40px;
+            font-size: 14px;
+        }
+        #bottom-left {
+            padding-left: 30px;
+        }
+        #bottom-right {
+            padding-right: 10px;
+        }
         </style>
         <title>Google.co.uk</title>
     </head>
     <body>
         <header>
             <div id="top-left">
-                <a style="padding: 5px;" href="#">About</a>
-                <a style="padding: 5px;" href="#">Store</a>
+                <a style="padding: 5px; color: rgba(0,0,0,0.87);" href="#">About</a>
+                <a style="padding: 5px; color: rgba(0,0,0,0.87);" href="#">Store</a>
             </div>
             <div id="top-right">
-                <a style="position: block;" href="#">Gmail</a>
-                <a style="padding: 15px; position: block" href="#">Images</a>
+                <a href="#" style="color: rgba(0,0,0,0.87);">Gmail</a>
+                <a style="padding: 15px; color: rgba(0,0,0,0.87);" href="#">Images</a>
                 <div id="menu" href="#">
                     <div class="box"></div>
                     <div class="box"></div>
@@ -140,11 +190,22 @@
                 <div class="letter" id="l">l</div>
                 <div class="letter" id="e">e</div>
             </div>
+    <form action="#">    
         </div>
         <div id="form">
-            <div id="search-bar-left"></div>    
-            <div id="search-bar"></div>
-            <div id="search-bar-right"></div>
-        </div>           
+                <div id="search-bar"><input type="text" id="text-input"></div>
+        </div> 
+        <div id="buttons">
+            <button id="search" class="form-buttons" type="submit">Google Search</button>
+            <button id="feeling-lucky" class="form-buttons">I'm Feeling Lucky</button>    
+        </div>
+    </form>
+        <footer id="footer">
+             <div id="uk">United Kingdom</div>
+             <div id="footer-links">
+                 <div id="bottom-left"><a href="#">Advertising</a> <a href="#">Business</a> <a href="#">How Search Works</a></div>
+                 <div id="bottom-right"><a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Terms</a> <a href="#">Settings</a></div>
+             </div>
+        </footer>              
     </body>
 </html>
